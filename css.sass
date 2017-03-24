@@ -1,0 +1,54 @@
+@import 'bourbon/bourbon.scss'
+
+html
+	height: 100%
+
+@media screen and (max-width: 479px)
+	html
+		font-size: 12px
+
+@media screen and (min-width: 480px)
+	html
+		font-size: 16px
+
+@media screen and (min-width: 960px)
+	html
+		font-size: 20px
+
+@media screen and (min-width: 1200px)
+	html
+		font-size: 28px
+
+body
+	background:
+		image: url('https://images.unsplash.com/photo-1415369629372-26f2fe60c467?dpr=1&auto=compress,format&fit=crop&w=767&h=1151&q=80&cs=tinysrgb&crop=')
+		repeat: no-repeat
+		size: cover
+		position: center
+
+	font-family: Lato
+
+.navbar-default .navbar-toggle:hover
+	background-color: transparent
+
+.nav li:hover
+	background-color: #e3e3e3
+	+transition()
+
+.content
+	padding-top: 25%
+	color: white
+	max-width: 500px
+	margin: 0 auto
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 6px rgba(0,0,0,0.2), 0px 14px 12px rgba(0,0,0,0.2)
+
+	h1
+		font-size: 2.5rem
+		font-weight: bold
+
+	.btn
+		+transition()
+
+	hr
+		border-top: 1px solid #f8f8f8
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2)
