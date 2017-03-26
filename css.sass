@@ -1,23 +1,19 @@
 @import 'bourbon/bourbon.scss'
 
+$screen-sizes: (md: 960px, sm: 768px, xs: 480px)
+
+$font-sizes: (md: 20px, sm: 18px, xs: 16px)
+
+@mixin responsive-text()
+	@each $breakpoint, $size in $screen-sizes
+		@if map-has-key($font-sizes, $breakpoint)
+			@media screen and (max-width: #{map-get($screen-sizes, $breakpoint)})
+				font-size: #{map-get($font-sizes, $breakpoint)}
+
 html
 	height: 100%
-
-@media screen and (max-width: 479px)
-	html
-		font-size: 12px
-
-@media screen and (min-width: 480px)
-	html
-		font-size: 16px
-
-@media screen and (min-width: 960px)
-	html
-		font-size: 20px
-
-@media screen and (min-width: 1200px)
-	html
-		font-size: 28px
+	font-size: 28px
+	+responsive-text()
 
 body
 	background:
